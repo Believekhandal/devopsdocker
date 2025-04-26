@@ -3,7 +3,7 @@ FROM openjdk:17-jdk-alpine
 
 
 # Expose the application port
-EXPOSE 8080
+EXPOSE 8888
 
 # Add the Spring Boot JAR file
 ARG JAR_FILE=target/dockerdemo-1.0.0.jar
