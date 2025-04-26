@@ -6,7 +6,7 @@ FROM openjdk:17-jdk-alpine
 EXPOSE 8888
 
 # Add the Spring Boot JAR file
-ARG JAR_FILE=target/dockerdemo-1.0.0.jar
+ARG JAR_FILE=target/dockerdemo-1.0.5.jar
 ADD ${JAR_FILE} app.jar
 
 # Command to run the Spring Boot application
