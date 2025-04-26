@@ -1,18 +1,15 @@
 package com.dockerdemo.dockerdemo.controller;
 
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Slf4j
-@Controller
-@RequestMapping("/api/v1")
+@RestController
+@RequestMapping("/api") // Optional base URL
 public class HelloWorldController {
 
-    @GetMapping("/hello")
+    @GetMapping("/hello") // Endpoint URL: /api/hello
     public String sayHello() {
-        log.info("Request received.....");
-        return "home"; // It will look for home.html under src/main/resources/templates/
+        return "Hello, World!";
     }
 }
